@@ -1,0 +1,834 @@
+2023-09-02T12:53:43.114-07:00  INFO 1252 --- [main] devis.springboot.app.AppApplication      : Starting AppApplication using Java 19.0.1 with PID 1252 (C:\Users\dervi\OneDrive\Desktop\app\app\target\classes started by dervi in C:\Users\dervi\OneDrive\Desktop\app)
+2023-09-02T12:53:43.133-07:00  INFO 1252 --- [main] devis.springboot.app.AppApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-09-02T12:53:44.376-07:00  INFO 1252 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-02T12:53:44.420-07:00  INFO 1252 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 0 JPA repository interfaces.
+2023-09-02T12:53:45.331-07:00  INFO 1252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-02T12:53:45.352-07:00  INFO 1252 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-02T12:53:45.352-07:00  INFO 1252 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-02T12:53:45.496-07:00  INFO 1252 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-02T12:53:45.498-07:00  INFO 1252 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2250 ms
+2023-09-02T12:53:45.546-07:00  INFO 1252 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-02T12:53:45.842-07:00  INFO 1252 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-09-02T12:53:45.844-07:00  INFO 1252 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-02T12:53:45.856-07:00  INFO 1252 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-09-02T12:53:46.036-07:00  INFO 1252 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-02T12:53:46.148-07:00  INFO 1252 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-02T12:53:46.152-07:00  INFO 1252 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-02T12:53:46.388-07:00  INFO 1252 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T12:53:46.591-07:00  INFO 1252 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-02T12:53:46.937-07:00  INFO 1252 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T12:53:47.148-07:00 ERROR 1252 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Column 'id' is duplicated in mapping for entity 'devis.springboot.app.entity.Comment' (use '@Column(insertable=false, updatable=false)' when mapping multiple properties to the same column)
+2023-09-02T12:53:47.151-07:00  WARN 1252 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Column 'id' is duplicated in mapping for entity 'devis.springboot.app.entity.Comment' (use '@Column(insertable=false, updatable=false)' when mapping multiple properties to the same column)
+2023-09-02T12:53:47.152-07:00  INFO 1252 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-02T12:53:47.157-07:00  INFO 1252 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-02T12:53:47.160-07:00  INFO 1252 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-02T12:53:47.184-07:00  INFO 1252 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-09-02T12:53:47.218-07:00 ERROR 1252 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Column 'id' is duplicated in mapping for entity 'devis.springboot.app.entity.Comment' (use '@Column(insertable=false, updatable=false)' when mapping multiple properties to the same column)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.3.jar:3.1.3]
+	at devis.springboot.app.AppApplication.main(AppApplication.java:10) ~[classes/:na]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Column 'id' is duplicated in mapping for entity 'devis.springboot.app.entity.Comment' (use '@Column(insertable=false, updatable=false)' when mapping multiple properties to the same column)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 16 common frames omitted
+Caused by: org.hibernate.MappingException: Column 'id' is duplicated in mapping for entity 'devis.springboot.app.entity.Comment' (use '@Column(insertable=false, updatable=false)' when mapping multiple properties to the same column)
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:1054) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.mapping.PersistentClass.checkPropertyColumnDuplication(PersistentClass.java:1080) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:1110) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:754) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:288) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:497) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:251) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:431) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1455) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.11.jar:6.0.11]
+	... 20 common frames omitted
+
+2023-09-02T12:55:19.204-07:00  INFO 15512 --- [main] devis.springboot.app.AppApplication      : Starting AppApplication using Java 19.0.1 with PID 15512 (C:\Users\dervi\OneDrive\Desktop\app\app\target\classes started by dervi in C:\Users\dervi\OneDrive\Desktop\app)
+2023-09-02T12:55:19.208-07:00  INFO 15512 --- [main] devis.springboot.app.AppApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-09-02T12:55:20.206-07:00  INFO 15512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-02T12:55:20.240-07:00  INFO 15512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+2023-09-02T12:55:21.194-07:00  INFO 15512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-02T12:55:21.209-07:00  INFO 15512 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-02T12:55:21.209-07:00  INFO 15512 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-02T12:55:21.375-07:00  INFO 15512 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-02T12:55:21.376-07:00  INFO 15512 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2091 ms
+2023-09-02T12:55:21.433-07:00  INFO 15512 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-02T12:55:21.696-07:00  INFO 15512 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-09-02T12:55:21.699-07:00  INFO 15512 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-02T12:55:21.716-07:00  INFO 15512 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-09-02T12:55:21.961-07:00  INFO 15512 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-02T12:55:22.063-07:00  INFO 15512 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-02T12:55:22.067-07:00  INFO 15512 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-02T12:55:22.279-07:00  INFO 15512 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T12:55:22.531-07:00  INFO 15512 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-02T12:55:22.904-07:00  INFO 15512 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T12:55:23.855-07:00  INFO 15512 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-02T12:55:23.920-07:00  INFO 15512 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T12:55:23.985-07:00  WARN 15512 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-02T12:55:24.450-07:00  INFO 15512 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-02T12:55:24.450-07:00  INFO 15512 --- [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-02T12:55:24.452-07:00  INFO 15512 --- [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-09-02T12:55:24.453-07:00  INFO 15512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-02T12:55:24.467-07:00  INFO 15512 --- [main] devis.springboot.app.AppApplication      : Started AppApplication in 5.982 seconds (process running for 6.662)
+2023-09-02T12:57:19.024-07:00  INFO 15512 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T12:57:19.200-07:00  INFO 15512 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-02T12:57:19.207-07:00  INFO 15512 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-02T13:10:54.256-07:00  INFO 21908 --- [main] devis.springboot.app.AppApplication      : Starting AppApplication using Java 19.0.1 with PID 21908 (C:\Users\dervi\OneDrive\Desktop\app\app\target\classes started by dervi in C:\Users\dervi\OneDrive\Desktop\app)
+2023-09-02T13:10:54.259-07:00  INFO 21908 --- [main] devis.springboot.app.AppApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-09-02T13:10:55.279-07:00  INFO 21908 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-02T13:10:55.386-07:00  INFO 21908 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 1 JPA repository interfaces.
+2023-09-02T13:10:56.359-07:00  INFO 21908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-02T13:10:56.374-07:00  INFO 21908 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-02T13:10:56.374-07:00  INFO 21908 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-02T13:10:56.519-07:00  INFO 21908 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-02T13:10:56.520-07:00  INFO 21908 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2183 ms
+2023-09-02T13:10:56.563-07:00  INFO 21908 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-02T13:10:56.831-07:00  INFO 21908 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-09-02T13:10:56.833-07:00  INFO 21908 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-02T13:10:56.849-07:00  INFO 21908 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-09-02T13:10:57.084-07:00  INFO 21908 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-02T13:10:57.155-07:00  INFO 21908 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-02T13:10:57.159-07:00  INFO 21908 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-02T13:10:57.370-07:00  INFO 21908 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T13:10:57.612-07:00  INFO 21908 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-02T13:10:58.033-07:00  INFO 21908 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T13:10:58.894-07:00  INFO 21908 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-02T13:10:58.950-07:00  INFO 21908 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T13:10:59.339-07:00  WARN 21908 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-02T13:10:59.707-07:00  INFO 21908 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-02T13:10:59.708-07:00  INFO 21908 --- [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-02T13:10:59.709-07:00  INFO 21908 --- [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-02T13:10:59.710-07:00  INFO 21908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-02T13:10:59.718-07:00  INFO 21908 --- [main] devis.springboot.app.AppApplication      : Started AppApplication in 6.226 seconds (process running for 6.88)
+2023-09-02T13:17:00.434-07:00  INFO 21908 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T13:17:00.620-07:00  INFO 21908 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-02T13:17:00.642-07:00  INFO 21908 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-02T13:17:30.963-07:00  INFO 21804 --- [main] devis.springboot.app.AppApplication      : Starting AppApplication using Java 19.0.1 with PID 21804 (C:\Users\dervi\OneDrive\Desktop\app\app\target\classes started by dervi in C:\Users\dervi\OneDrive\Desktop\app)
+2023-09-02T13:17:30.966-07:00  INFO 21804 --- [main] devis.springboot.app.AppApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-09-02T13:17:31.982-07:00  INFO 21804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-02T13:17:32.072-07:00  INFO 21804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 1 JPA repository interfaces.
+2023-09-02T13:17:33.008-07:00  INFO 21804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-02T13:17:33.023-07:00  INFO 21804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-02T13:17:33.024-07:00  INFO 21804 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-02T13:17:33.186-07:00  INFO 21804 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-02T13:17:33.187-07:00  INFO 21804 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2141 ms
+2023-09-02T13:17:33.240-07:00  INFO 21804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-02T13:17:33.510-07:00  INFO 21804 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-09-02T13:17:33.512-07:00  INFO 21804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-02T13:17:33.529-07:00  INFO 21804 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-09-02T13:17:33.798-07:00  INFO 21804 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-02T13:17:33.877-07:00  INFO 21804 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-02T13:17:33.881-07:00  INFO 21804 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-02T13:17:34.092-07:00  INFO 21804 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T13:17:34.305-07:00  INFO 21804 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-02T13:17:34.689-07:00  INFO 21804 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T13:17:35.677-07:00  INFO 21804 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-02T13:17:35.760-07:00  INFO 21804 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T13:17:36.202-07:00  WARN 21804 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-02T13:17:36.694-07:00  INFO 21804 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-02T13:17:36.695-07:00  INFO 21804 --- [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-02T13:17:36.696-07:00  INFO 21804 --- [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-02T13:17:36.697-07:00  INFO 21804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-02T13:17:36.710-07:00  INFO 21804 --- [main] devis.springboot.app.AppApplication      : Started AppApplication in 6.526 seconds (process running for 7.18)
+2023-09-02T13:17:58.929-07:00  WARN 21804 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2023-09-02T13:18:28.969-07:00  INFO 21804 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T13:18:29.137-07:00  INFO 21804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-02T13:18:29.147-07:00  INFO 21804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-02T13:18:35.407-07:00  INFO 4368 --- [main] devis.springboot.app.AppApplication      : Starting AppApplication using Java 19.0.1 with PID 4368 (C:\Users\dervi\OneDrive\Desktop\app\app\target\classes started by dervi in C:\Users\dervi\OneDrive\Desktop\app)
+2023-09-02T13:18:35.411-07:00  INFO 4368 --- [main] devis.springboot.app.AppApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-09-02T13:18:36.479-07:00  INFO 4368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-02T13:18:36.589-07:00  INFO 4368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 1 JPA repository interfaces.
+2023-09-02T13:18:37.547-07:00  INFO 4368 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-02T13:18:37.562-07:00  INFO 4368 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-02T13:18:37.563-07:00  INFO 4368 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-02T13:18:37.709-07:00  INFO 4368 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-02T13:18:37.710-07:00  INFO 4368 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2219 ms
+2023-09-02T13:18:37.754-07:00  INFO 4368 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-02T13:18:38.035-07:00  INFO 4368 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-09-02T13:18:38.039-07:00  INFO 4368 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-02T13:18:38.057-07:00  INFO 4368 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-09-02T13:18:38.330-07:00  INFO 4368 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-02T13:18:38.429-07:00  INFO 4368 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-02T13:18:38.432-07:00  INFO 4368 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-02T13:18:38.656-07:00  INFO 4368 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T13:18:38.885-07:00  INFO 4368 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-02T13:18:39.232-07:00  INFO 4368 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T13:18:40.119-07:00  INFO 4368 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-02T13:18:40.172-07:00  INFO 4368 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T13:18:40.574-07:00  WARN 4368 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-02T13:18:40.995-07:00  INFO 4368 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-02T13:18:40.995-07:00  INFO 4368 --- [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-02T13:18:40.996-07:00  INFO 4368 --- [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-02T13:18:40.998-07:00  INFO 4368 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-02T13:18:41.009-07:00  INFO 4368 --- [main] devis.springboot.app.AppApplication      : Started AppApplication in 6.39 seconds (process running for 7.078)
+2023-09-02T13:18:51.177-07:00  WARN 4368 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2023-09-02T13:19:21.989-07:00  INFO 4368 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T13:19:22.177-07:00  INFO 4368 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-02T13:19:22.186-07:00  INFO 4368 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-02T13:46:20.279-07:00  INFO 21976 --- [main] devis.springboot.app.AppApplication      : Starting AppApplication using Java 19.0.1 with PID 21976 (C:\Users\dervi\OneDrive\Desktop\app\app\target\classes started by dervi in C:\Users\dervi\OneDrive\Desktop\app)
+2023-09-02T13:46:20.281-07:00  INFO 21976 --- [main] devis.springboot.app.AppApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-09-02T13:46:21.032-07:00  INFO 21976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-02T13:46:21.100-07:00  INFO 21976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interfaces.
+2023-09-02T13:46:21.749-07:00  INFO 21976 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-02T13:46:21.759-07:00  INFO 21976 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-02T13:46:21.759-07:00  INFO 21976 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-02T13:46:21.861-07:00  INFO 21976 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-02T13:46:21.862-07:00  INFO 21976 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1520 ms
+2023-09-02T13:46:21.895-07:00  INFO 21976 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-02T13:46:22.083-07:00  INFO 21976 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-09-02T13:46:22.095-07:00  INFO 21976 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-02T13:46:22.106-07:00  INFO 21976 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-09-02T13:46:22.265-07:00  INFO 21976 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-02T13:46:22.324-07:00  INFO 21976 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-02T13:46:22.326-07:00  INFO 21976 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-02T13:46:22.469-07:00  INFO 21976 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T13:46:22.617-07:00  INFO 21976 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-02T13:46:22.861-07:00  INFO 21976 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T13:46:23.510-07:00  INFO 21976 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-02T13:46:23.561-07:00  INFO 21976 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T13:46:23.857-07:00  WARN 21976 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-02T13:46:24.199-07:00  INFO 21976 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-02T13:46:24.199-07:00  INFO 21976 --- [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-02T13:46:24.200-07:00  INFO 21976 --- [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-02T13:46:24.201-07:00  INFO 21976 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-02T13:46:24.209-07:00  INFO 21976 --- [main] devis.springboot.app.AppApplication      : Started AppApplication in 4.496 seconds (process running for 5.129)
+2023-09-02T13:47:55.180-07:00  INFO 21976 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T13:47:55.354-07:00  INFO 21976 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-02T13:47:55.370-07:00  INFO 21976 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-02T13:49:02.299-07:00  INFO 18572 --- [main] devis.springboot.app.AppApplication      : Starting AppApplication using Java 19.0.1 with PID 18572 (C:\Users\dervi\OneDrive\Desktop\app\app\target\classes started by dervi in C:\Users\dervi\OneDrive\Desktop\app)
+2023-09-02T13:49:02.303-07:00  INFO 18572 --- [main] devis.springboot.app.AppApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-09-02T13:49:03.540-07:00  INFO 18572 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-02T13:49:03.672-07:00  INFO 18572 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 1 JPA repository interfaces.
+2023-09-02T13:49:04.665-07:00  INFO 18572 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-02T13:49:04.679-07:00  INFO 18572 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-02T13:49:04.680-07:00  INFO 18572 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-02T13:49:04.849-07:00  INFO 18572 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-02T13:49:04.849-07:00  INFO 18572 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2458 ms
+2023-09-02T13:49:04.897-07:00  INFO 18572 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-02T13:49:05.207-07:00  INFO 18572 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-09-02T13:49:05.210-07:00  INFO 18572 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-02T13:49:05.227-07:00  INFO 18572 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-09-02T13:49:05.460-07:00  INFO 18572 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-02T13:49:05.545-07:00  INFO 18572 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-02T13:49:05.550-07:00  INFO 18572 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-02T13:49:05.783-07:00  INFO 18572 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T13:49:06.002-07:00  INFO 18572 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-02T13:49:06.331-07:00  INFO 18572 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T13:49:07.064-07:00  INFO 18572 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-02T13:49:07.126-07:00  INFO 18572 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T13:49:07.518-07:00  WARN 18572 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-02T13:49:07.916-07:00  INFO 18572 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-02T13:49:07.916-07:00  INFO 18572 --- [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-02T13:49:07.918-07:00  INFO 18572 --- [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-02T13:49:07.919-07:00  INFO 18572 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-02T13:49:07.927-07:00  INFO 18572 --- [main] devis.springboot.app.AppApplication      : Started AppApplication in 6.393 seconds (process running for 7.05)
+2023-09-02T13:50:31.052-07:00  INFO 18572 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T13:50:31.229-07:00  INFO 18572 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-02T13:50:31.241-07:00  INFO 18572 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-02T13:50:33.937-07:00  INFO 2936 --- [main] devis.springboot.app.AppApplication      : Starting AppApplication using Java 19.0.1 with PID 2936 (C:\Users\dervi\OneDrive\Desktop\app\app\target\classes started by dervi in C:\Users\dervi\OneDrive\Desktop\app)
+2023-09-02T13:50:33.941-07:00  INFO 2936 --- [main] devis.springboot.app.AppApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-09-02T13:50:34.998-07:00  INFO 2936 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-02T13:50:35.089-07:00  INFO 2936 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 1 JPA repository interfaces.
+2023-09-02T13:50:36.036-07:00  INFO 2936 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-02T13:50:36.052-07:00  INFO 2936 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-02T13:50:36.053-07:00  INFO 2936 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-02T13:50:36.210-07:00  INFO 2936 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-02T13:50:36.211-07:00  INFO 2936 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2196 ms
+2023-09-02T13:50:36.251-07:00  INFO 2936 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-02T13:50:36.538-07:00  INFO 2936 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-09-02T13:50:36.540-07:00  INFO 2936 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-02T13:50:36.556-07:00  INFO 2936 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-09-02T13:50:36.811-07:00  INFO 2936 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-02T13:50:36.889-07:00  INFO 2936 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-02T13:50:36.891-07:00  INFO 2936 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-02T13:50:37.120-07:00  INFO 2936 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T13:50:37.356-07:00  INFO 2936 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-02T13:50:37.715-07:00  INFO 2936 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T13:50:38.643-07:00  INFO 2936 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-02T13:50:38.711-07:00  INFO 2936 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T13:50:39.163-07:00  WARN 2936 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-02T13:50:39.672-07:00  INFO 2936 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-02T13:50:39.672-07:00  INFO 2936 --- [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-02T13:50:39.674-07:00  INFO 2936 --- [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-09-02T13:50:39.675-07:00  INFO 2936 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-02T13:50:39.686-07:00  INFO 2936 --- [main] devis.springboot.app.AppApplication      : Started AppApplication in 6.587 seconds (process running for 7.393)
+2023-09-02T13:51:45.821-07:00  INFO 2936 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T13:51:46.010-07:00  INFO 2936 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-02T13:51:46.026-07:00  INFO 2936 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-02T13:58:41.439-07:00  INFO 21032 --- [main] devis.springboot.app.AppApplication      : Starting AppApplication using Java 19.0.1 with PID 21032 (C:\Users\dervi\OneDrive\Desktop\app\app\target\classes started by dervi in C:\Users\dervi\OneDrive\Desktop\app)
+2023-09-02T13:58:41.444-07:00  INFO 21032 --- [main] devis.springboot.app.AppApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-09-02T13:58:42.509-07:00  INFO 21032 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-02T13:58:42.604-07:00  INFO 21032 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 1 JPA repository interfaces.
+2023-09-02T13:58:43.569-07:00  INFO 21032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-02T13:58:43.585-07:00  INFO 21032 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-02T13:58:43.585-07:00  INFO 21032 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-02T13:58:43.732-07:00  INFO 21032 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-02T13:58:43.733-07:00  INFO 21032 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2206 ms
+2023-09-02T13:58:43.779-07:00  INFO 21032 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-02T13:58:44.056-07:00  INFO 21032 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-09-02T13:58:44.058-07:00  INFO 21032 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-02T13:58:44.074-07:00  INFO 21032 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-09-02T13:58:44.321-07:00  INFO 21032 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-02T13:58:44.403-07:00  INFO 21032 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-02T13:58:44.408-07:00  INFO 21032 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-02T13:58:44.637-07:00  INFO 21032 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T13:58:44.887-07:00  INFO 21032 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-02T13:58:45.256-07:00  INFO 21032 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T13:58:46.205-07:00  INFO 21032 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-02T13:58:46.272-07:00  INFO 21032 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T13:58:46.711-07:00  WARN 21032 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-02T13:58:47.196-07:00  INFO 21032 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-02T13:58:47.196-07:00  INFO 21032 --- [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-02T13:58:47.198-07:00  INFO 21032 --- [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-09-02T13:58:47.199-07:00  INFO 21032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-02T13:58:47.211-07:00  INFO 21032 --- [main] devis.springboot.app.AppApplication      : Started AppApplication in 6.545 seconds (process running for 7.236)
+2023-09-02T14:09:59.971-07:00  INFO 21032 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T14:10:00.155-07:00  INFO 21032 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-02T14:10:00.169-07:00  INFO 21032 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-02T14:13:49.764-07:00  INFO 9860 --- [main] devis.springboot.app.AppApplication      : Starting AppApplication using Java 19.0.1 with PID 9860 (C:\Users\dervi\OneDrive\Desktop\app\app\target\classes started by dervi in C:\Users\dervi\OneDrive\Desktop\app)
+2023-09-02T14:13:49.764-07:00  INFO 9860 --- [main] devis.springboot.app.AppApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-09-02T14:13:50.889-07:00  INFO 9860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-02T14:13:50.992-07:00  INFO 9860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 1 JPA repository interfaces.
+2023-09-02T14:13:52.007-07:00  INFO 9860 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-02T14:13:52.026-07:00  INFO 9860 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-02T14:13:52.027-07:00  INFO 9860 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-02T14:13:52.170-07:00  INFO 9860 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-02T14:13:52.171-07:00  INFO 9860 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2311 ms
+2023-09-02T14:13:52.213-07:00  INFO 9860 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-02T14:13:52.540-07:00  INFO 9860 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-09-02T14:13:52.543-07:00  INFO 9860 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-02T14:13:52.559-07:00  INFO 9860 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-09-02T14:13:52.808-07:00  INFO 9860 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-02T14:13:52.891-07:00  INFO 9860 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-02T14:13:52.894-07:00  INFO 9860 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-02T14:13:53.134-07:00  INFO 9860 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T14:13:53.398-07:00  INFO 9860 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-02T14:13:53.749-07:00  INFO 9860 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T14:13:54.743-07:00  INFO 9860 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-02T14:13:54.818-07:00  INFO 9860 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T14:13:55.271-07:00  WARN 9860 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-02T14:13:55.783-07:00  INFO 9860 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-02T14:13:55.783-07:00  INFO 9860 --- [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-02T14:13:55.784-07:00  INFO 9860 --- [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-02T14:13:55.786-07:00  INFO 9860 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-02T14:13:55.798-07:00  INFO 9860 --- [main] devis.springboot.app.AppApplication      : Started AppApplication in 6.937 seconds (process running for 7.756)
+2023-09-02T14:14:34.282-07:00  INFO 9860 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T14:14:34.463-07:00  INFO 9860 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-02T14:14:34.472-07:00  INFO 9860 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-02T20:14:56.908-07:00  INFO 18652 --- [main] devis.springboot.app.AppApplication      : Starting AppApplication using Java 19.0.1 with PID 18652 (C:\Users\dervi\OneDrive\Desktop\app\app\target\classes started by dervi in C:\Users\dervi\OneDrive\Desktop\app)
+2023-09-02T20:14:56.913-07:00  INFO 18652 --- [main] devis.springboot.app.AppApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-09-02T20:14:58.082-07:00  INFO 18652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-02T20:14:58.181-07:00  INFO 18652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 1 JPA repository interfaces.
+2023-09-02T20:14:59.130-07:00  INFO 18652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-02T20:14:59.143-07:00  INFO 18652 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-02T20:14:59.143-07:00  INFO 18652 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-02T20:14:59.287-07:00  INFO 18652 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-02T20:14:59.287-07:00  INFO 18652 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2270 ms
+2023-09-02T20:14:59.324-07:00  INFO 18652 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-02T20:14:59.608-07:00  INFO 18652 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-09-02T20:14:59.610-07:00  INFO 18652 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-02T20:14:59.623-07:00  INFO 18652 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-09-02T20:14:59.879-07:00  INFO 18652 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-02T20:14:59.970-07:00  INFO 18652 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-02T20:14:59.973-07:00  INFO 18652 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-02T20:15:00.217-07:00  INFO 18652 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T20:15:00.430-07:00  INFO 18652 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-02T20:15:00.819-07:00  INFO 18652 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T20:15:01.391-07:00  INFO 18652 --- [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: devis.springboot.app.entity.Transaction (class must be instantiated by Interceptor)
+2023-09-02T20:15:01.731-07:00  INFO 18652 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-02T20:15:01.799-07:00  INFO 18652 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T20:15:02.101-07:00  WARN 18652 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'transaction' defined in file [C:\Users\dervi\OneDrive\Desktop\app\app\target\classes\devis\springboot\app\entity\Transaction.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'java.lang.Long' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-09-02T20:15:02.102-07:00  INFO 18652 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T20:15:02.110-07:00  INFO 18652 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-02T20:15:02.112-07:00  INFO 18652 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-02T20:15:02.115-07:00  INFO 18652 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-02T20:15:02.131-07:00  INFO 18652 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-09-02T20:15:02.164-07:00 ERROR 18652 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in devis.springboot.app.entity.Transaction required a bean of type 'java.lang.Long' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.Long' in your configuration.
+
+2023-09-02T20:15:31.744-07:00  INFO 2848 --- [main] devis.springboot.app.AppApplication      : Starting AppApplication using Java 19.0.1 with PID 2848 (C:\Users\dervi\OneDrive\Desktop\app\app\target\classes started by dervi in C:\Users\dervi\OneDrive\Desktop\app)
+2023-09-02T20:15:31.748-07:00  INFO 2848 --- [main] devis.springboot.app.AppApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-09-02T20:15:32.964-07:00  INFO 2848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-02T20:15:33.060-07:00  INFO 2848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 1 JPA repository interfaces.
+2023-09-02T20:15:34.110-07:00  INFO 2848 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-02T20:15:34.124-07:00  INFO 2848 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-02T20:15:34.125-07:00  INFO 2848 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-02T20:15:34.274-07:00  INFO 2848 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-02T20:15:34.275-07:00  INFO 2848 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2441 ms
+2023-09-02T20:15:34.324-07:00  INFO 2848 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-02T20:15:34.596-07:00  INFO 2848 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-09-02T20:15:34.598-07:00  INFO 2848 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-02T20:15:34.614-07:00  INFO 2848 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-09-02T20:15:34.825-07:00  INFO 2848 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-02T20:15:34.889-07:00  INFO 2848 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-02T20:15:34.893-07:00  INFO 2848 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-02T20:15:35.098-07:00  INFO 2848 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T20:15:35.278-07:00  INFO 2848 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-02T20:15:35.583-07:00  INFO 2848 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T20:15:36.394-07:00  INFO 2848 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-02T20:15:36.462-07:00  INFO 2848 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T20:15:36.812-07:00  WARN 2848 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-02T20:15:37.261-07:00  INFO 2848 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-02T20:15:37.261-07:00  INFO 2848 --- [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-02T20:15:37.263-07:00  INFO 2848 --- [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-09-02T20:15:37.264-07:00  INFO 2848 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-02T20:15:37.274-07:00  INFO 2848 --- [main] devis.springboot.app.AppApplication      : Started AppApplication in 6.329 seconds (process running for 7.073)
+2023-09-02T20:17:10.700-07:00  INFO 2848 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T20:17:10.883-07:00  INFO 2848 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-02T20:17:10.890-07:00  INFO 2848 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-02T20:25:31.757-07:00  INFO 21060 --- [main] devis.springboot.app.AppApplication      : Starting AppApplication using Java 19.0.1 with PID 21060 (C:\Users\dervi\OneDrive\Desktop\app\app\target\classes started by dervi in C:\Users\dervi\OneDrive\Desktop\app)
+2023-09-02T20:25:31.761-07:00  INFO 21060 --- [main] devis.springboot.app.AppApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-09-02T20:25:32.808-07:00  INFO 21060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-02T20:25:32.915-07:00  INFO 21060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 1 JPA repository interfaces.
+2023-09-02T20:25:33.852-07:00  INFO 21060 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-02T20:25:33.868-07:00  INFO 21060 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-02T20:25:33.868-07:00  INFO 21060 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-02T20:25:34.019-07:00  INFO 21060 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-02T20:25:34.019-07:00  INFO 21060 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2184 ms
+2023-09-02T20:25:34.071-07:00  INFO 21060 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-02T20:25:34.335-07:00  INFO 21060 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-09-02T20:25:34.337-07:00  INFO 21060 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-02T20:25:34.354-07:00  INFO 21060 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-09-02T20:25:34.589-07:00  INFO 21060 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-02T20:25:34.682-07:00  INFO 21060 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-02T20:25:34.686-07:00  INFO 21060 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-02T20:25:34.907-07:00  INFO 21060 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T20:25:35.151-07:00  INFO 21060 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-02T20:25:35.546-07:00  INFO 21060 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T20:25:36.541-07:00  INFO 21060 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-02T20:25:36.591-07:00  WARN 21060 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table rating (value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id))" via JDBC [Syntax error in SQL statement "create table rating ([*]value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id))"; expected "identifier";]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table rating (value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id))" via JDBC [Syntax error in SQL statement "create table rating ([*]value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id))"; expected "identifier";]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:92) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:235) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:219) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createTables(SchemaCreatorImpl.java:419) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createSequencesTablesConstraints(SchemaCreatorImpl.java:340) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:239) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:172) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:142) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:118) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:254) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:292) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:431) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1455) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.3.jar:3.1.3]
+	at devis.springboot.app.AppApplication.main(AppApplication.java:10) ~[classes/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table rating ([*]value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id))"; expected "identifier"; SQL statement:
+create table rating (value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id)) [42001-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readIdentifier(Parser.java:5656) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:9326) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9271) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseCreate(Parser.java:6784) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parsePrepared(Parser.java:763) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:78) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	... 40 common frames omitted
+
+2023-09-02T20:25:36.641-07:00  INFO 21060 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T20:25:37.126-07:00  WARN 21060 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-02T20:25:37.526-07:00  INFO 21060 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-02T20:25:37.526-07:00  INFO 21060 --- [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-02T20:25:37.528-07:00  INFO 21060 --- [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-02T20:25:37.530-07:00  INFO 21060 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-02T20:25:37.540-07:00  INFO 21060 --- [main] devis.springboot.app.AppApplication      : Started AppApplication in 6.552 seconds (process running for 7.374)
+2023-09-02T20:26:23.498-07:00  INFO 21060 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T20:26:23.663-07:00  INFO 21060 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-02T20:26:23.671-07:00  INFO 21060 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-02T20:27:32.514-07:00  INFO 20208 --- [main] devis.springboot.app.AppApplication      : Starting AppApplication using Java 19.0.1 with PID 20208 (C:\Users\dervi\OneDrive\Desktop\app\app\target\classes started by dervi in C:\Users\dervi\OneDrive\Desktop\app)
+2023-09-02T20:27:32.518-07:00  INFO 20208 --- [main] devis.springboot.app.AppApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-09-02T20:27:33.605-07:00  INFO 20208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-02T20:27:33.701-07:00  INFO 20208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 1 JPA repository interfaces.
+2023-09-02T20:27:34.638-07:00  INFO 20208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-02T20:27:34.653-07:00  INFO 20208 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-02T20:27:34.653-07:00  INFO 20208 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-02T20:27:34.819-07:00  INFO 20208 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-02T20:27:34.820-07:00  INFO 20208 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2209 ms
+2023-09-02T20:27:34.874-07:00  INFO 20208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-02T20:27:35.143-07:00  INFO 20208 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-09-02T20:27:35.145-07:00  INFO 20208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-02T20:27:35.160-07:00  INFO 20208 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-09-02T20:27:35.391-07:00  INFO 20208 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-02T20:27:35.467-07:00  INFO 20208 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-02T20:27:35.471-07:00  INFO 20208 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-02T20:27:35.680-07:00  INFO 20208 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T20:27:35.922-07:00  INFO 20208 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-02T20:27:36.281-07:00  INFO 20208 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T20:27:37.303-07:00  INFO 20208 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-02T20:27:37.356-07:00  WARN 20208 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table rating (value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id))" via JDBC [Syntax error in SQL statement "create table rating ([*]value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id))"; expected "identifier";]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table rating (value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id))" via JDBC [Syntax error in SQL statement "create table rating ([*]value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id))"; expected "identifier";]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:92) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:235) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:219) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createTables(SchemaCreatorImpl.java:419) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createSequencesTablesConstraints(SchemaCreatorImpl.java:340) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:239) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:172) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:142) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:118) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:254) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:292) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:431) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1455) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.3.jar:3.1.3]
+	at devis.springboot.app.AppApplication.main(AppApplication.java:10) ~[classes/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table rating ([*]value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id))"; expected "identifier"; SQL statement:
+create table rating (value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id)) [42001-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readIdentifier(Parser.java:5656) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:9326) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9271) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseCreate(Parser.java:6784) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parsePrepared(Parser.java:763) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:78) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	... 40 common frames omitted
+
+2023-09-02T20:27:37.394-07:00  INFO 20208 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T20:27:37.888-07:00  WARN 20208 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-02T20:27:38.365-07:00  INFO 20208 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-02T20:27:38.365-07:00  INFO 20208 --- [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-02T20:27:38.368-07:00  INFO 20208 --- [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-09-02T20:27:38.370-07:00  INFO 20208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-02T20:27:38.383-07:00  INFO 20208 --- [main] devis.springboot.app.AppApplication      : Started AppApplication in 6.626 seconds (process running for 7.314)
+2023-09-02T20:28:34.050-07:00  INFO 20208 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T20:28:34.230-07:00  INFO 20208 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-02T20:28:34.238-07:00  INFO 20208 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-02T20:29:47.294-07:00  INFO 17784 --- [main] devis.springboot.app.AppApplication      : Starting AppApplication using Java 19.0.1 with PID 17784 (C:\Users\dervi\OneDrive\Desktop\app\app\target\classes started by dervi in C:\Users\dervi\OneDrive\Desktop\app)
+2023-09-02T20:29:47.297-07:00  INFO 17784 --- [main] devis.springboot.app.AppApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-09-02T20:29:48.412-07:00  INFO 17784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-02T20:29:48.509-07:00  INFO 17784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 1 JPA repository interfaces.
+2023-09-02T20:29:49.490-07:00  INFO 17784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-02T20:29:49.506-07:00  INFO 17784 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-02T20:29:49.507-07:00  INFO 17784 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-02T20:29:49.670-07:00  INFO 17784 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-02T20:29:49.670-07:00  INFO 17784 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2289 ms
+2023-09-02T20:29:49.720-07:00  INFO 17784 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-02T20:29:50.009-07:00  INFO 17784 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-09-02T20:29:50.011-07:00  INFO 17784 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-02T20:29:50.027-07:00  INFO 17784 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-09-02T20:29:50.260-07:00  INFO 17784 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-02T20:29:50.337-07:00  INFO 17784 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-02T20:29:50.341-07:00  INFO 17784 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-02T20:29:50.546-07:00  INFO 17784 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T20:29:50.755-07:00  INFO 17784 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-02T20:29:51.152-07:00  INFO 17784 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T20:29:52.225-07:00  INFO 17784 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-02T20:29:52.278-07:00  WARN 17784 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table rating (value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id))" via JDBC [Syntax error in SQL statement "create table rating ([*]value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id))"; expected "identifier";]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table rating (value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id))" via JDBC [Syntax error in SQL statement "create table rating ([*]value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id))"; expected "identifier";]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:92) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:235) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:219) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createTables(SchemaCreatorImpl.java:419) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createSequencesTablesConstraints(SchemaCreatorImpl.java:340) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:239) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:172) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:142) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:118) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:254) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:292) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:431) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1455) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.3.jar:3.1.3]
+	at devis.springboot.app.AppApplication.main(AppApplication.java:10) ~[classes/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table rating ([*]value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id))"; expected "identifier"; SQL statement:
+create table rating (value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id)) [42001-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readIdentifier(Parser.java:5656) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:9326) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9271) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseCreate(Parser.java:6784) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parsePrepared(Parser.java:763) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:78) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	... 40 common frames omitted
+
+2023-09-02T20:29:52.312-07:00  INFO 17784 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T20:29:52.806-07:00  WARN 17784 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-02T20:29:53.269-07:00  INFO 17784 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-02T20:29:53.269-07:00  INFO 17784 --- [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-02T20:29:53.271-07:00  INFO 17784 --- [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-09-02T20:29:53.272-07:00  INFO 17784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-02T20:29:53.283-07:00  INFO 17784 --- [main] devis.springboot.app.AppApplication      : Started AppApplication in 6.74 seconds (process running for 7.413)
+2023-09-02T20:31:09.444-07:00  INFO 17784 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T20:31:09.617-07:00  INFO 17784 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-02T20:31:09.625-07:00  INFO 17784 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-02T20:31:15.119-07:00  INFO 15048 --- [main] devis.springboot.app.AppApplication      : Starting AppApplication using Java 19.0.1 with PID 15048 (C:\Users\dervi\OneDrive\Desktop\app\app\target\classes started by dervi in C:\Users\dervi\OneDrive\Desktop\app)
+2023-09-02T20:31:15.122-07:00  INFO 15048 --- [main] devis.springboot.app.AppApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-09-02T20:31:16.216-07:00  INFO 15048 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-02T20:31:16.307-07:00  INFO 15048 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 1 JPA repository interfaces.
+2023-09-02T20:31:17.267-07:00  INFO 15048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-02T20:31:17.282-07:00  INFO 15048 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-02T20:31:17.283-07:00  INFO 15048 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-02T20:31:17.457-07:00  INFO 15048 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-02T20:31:17.457-07:00  INFO 15048 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2245 ms
+2023-09-02T20:31:17.521-07:00  INFO 15048 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-02T20:31:17.819-07:00  INFO 15048 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-09-02T20:31:17.822-07:00  INFO 15048 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-02T20:31:17.842-07:00  INFO 15048 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-09-02T20:31:18.074-07:00  INFO 15048 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-02T20:31:18.152-07:00  INFO 15048 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-02T20:31:18.156-07:00  INFO 15048 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-02T20:31:18.387-07:00  INFO 15048 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T20:31:18.626-07:00  INFO 15048 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-02T20:31:19.038-07:00  INFO 15048 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T20:31:20.056-07:00  INFO 15048 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-02T20:31:20.106-07:00  WARN 15048 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table rating (value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id))" via JDBC [Syntax error in SQL statement "create table rating ([*]value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id))"; expected "identifier";]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table rating (value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id))" via JDBC [Syntax error in SQL statement "create table rating ([*]value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id))"; expected "identifier";]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:92) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:235) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:219) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createTables(SchemaCreatorImpl.java:419) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createSequencesTablesConstraints(SchemaCreatorImpl.java:340) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:239) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:172) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:142) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:118) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:254) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:292) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:431) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1455) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.3.jar:3.1.3]
+	at devis.springboot.app.AppApplication.main(AppApplication.java:10) ~[classes/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table rating ([*]value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id))"; expected "identifier"; SQL statement:
+create table rating (value integer not null, id bigint not null, member_id bigint not null, product_id bigint not null, primary key (id)) [42001-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readIdentifier(Parser.java:5656) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:9326) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9271) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseCreate(Parser.java:6784) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parsePrepared(Parser.java:763) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:78) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	... 40 common frames omitted
+
+2023-09-02T20:31:20.141-07:00  INFO 15048 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T20:31:20.581-07:00  WARN 15048 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-02T20:31:21.077-07:00  INFO 15048 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-02T20:31:21.077-07:00  INFO 15048 --- [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-02T20:31:21.079-07:00  INFO 15048 --- [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-09-02T20:31:21.080-07:00  INFO 15048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-02T20:31:21.095-07:00  INFO 15048 --- [main] devis.springboot.app.AppApplication      : Started AppApplication in 6.749 seconds (process running for 7.44)
+2023-09-02T20:33:29.429-07:00  INFO 15048 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T20:33:29.609-07:00  INFO 15048 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-02T20:33:29.616-07:00  INFO 15048 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-02T20:34:06.209-07:00  INFO 14272 --- [main] devis.springboot.app.AppApplication      : Starting AppApplication using Java 19.0.1 with PID 14272 (C:\Users\dervi\OneDrive\Desktop\app\app\target\classes started by dervi in C:\Users\dervi\OneDrive\Desktop\app)
+2023-09-02T20:34:06.213-07:00  INFO 14272 --- [main] devis.springboot.app.AppApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-09-02T20:34:07.325-07:00  INFO 14272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-02T20:34:07.419-07:00  INFO 14272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 1 JPA repository interfaces.
+2023-09-02T20:34:08.332-07:00  INFO 14272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-02T20:34:08.345-07:00  INFO 14272 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-02T20:34:08.345-07:00  INFO 14272 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-02T20:34:08.493-07:00  INFO 14272 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-02T20:34:08.493-07:00  INFO 14272 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2195 ms
+2023-09-02T20:34:08.544-07:00  INFO 14272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-02T20:34:08.801-07:00  INFO 14272 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-09-02T20:34:08.804-07:00  INFO 14272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-02T20:34:08.821-07:00  INFO 14272 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-09-02T20:34:09.066-07:00  INFO 14272 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-02T20:34:09.136-07:00  INFO 14272 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-02T20:34:09.139-07:00  INFO 14272 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-02T20:34:09.353-07:00  INFO 14272 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T20:34:09.593-07:00  INFO 14272 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-02T20:34:09.969-07:00  INFO 14272 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-02T20:34:10.889-07:00  INFO 14272 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-02T20:34:10.952-07:00  INFO 14272 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T20:34:11.307-07:00  WARN 14272 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-02T20:34:11.723-07:00  INFO 14272 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-02T20:34:11.723-07:00  INFO 14272 --- [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-02T20:34:11.724-07:00  INFO 14272 --- [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-02T20:34:11.726-07:00  INFO 14272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-02T20:34:11.737-07:00  INFO 14272 --- [main] devis.springboot.app.AppApplication      : Started AppApplication in 6.296 seconds (process running for 7.022)
+2023-09-02T20:34:54.290-07:00  INFO 14272 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-02T20:34:54.458-07:00  INFO 14272 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-02T20:34:54.465-07:00  INFO 14272 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
