@@ -4,6 +4,8 @@ spring:
   mvc:
     servlet:
       load-on-startup: 1
+  thymeleaf:
+    cache: false
   h2:
     console:
       enabled: true

@@ -10,6 +10,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("app/admin")
 public class AdminMemberController {
 
@@ -19,7 +20,7 @@ public class AdminMemberController {
     private ProductService productService;
 
 
-    @RequestMapping("/")
+    @RequestMapping("/dashboard")
     public String hello(){
         return "Hello admin";
     }

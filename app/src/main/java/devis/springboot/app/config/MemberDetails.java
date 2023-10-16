@@ -7,6 +7,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
 public class MemberDetails implements UserDetails {
 
@@ -19,6 +20,7 @@ public class MemberDetails implements UserDetails {
         if (member.getRole().equals("USER")) return Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"));
         else if (member.getRole().equals("ADMIN")) return  Arrays.asList(new SimpleGrantedAuthority("ROLE_ADMIN"));
         return null;
+
     }
 
     @Override
