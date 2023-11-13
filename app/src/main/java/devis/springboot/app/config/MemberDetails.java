@@ -14,9 +14,11 @@ public class MemberDetails implements UserDetails {
     private Member member;
     public MemberDetails(Member member){
         this.member=member;
+
     }
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+
         if (member.getRole().equals("USER")) return Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"));
         else if (member.getRole().equals("ADMIN")) return  Arrays.asList(new SimpleGrantedAuthority("ROLE_ADMIN"));
         return null;

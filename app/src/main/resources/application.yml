@@ -6,13 +6,17 @@ spring:
       load-on-startup: 1
   thymeleaf:
     cache: false
-  h2:
-    console:
-      enabled: true
-  datasource:
-    url: jdbc:h2:mem:testdb
-    driverClassName: org.h2.Driver
-    username: sa
-    password: password
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/eCommerceApp
+    username: postgres
+    password: devis12345
+    driverClassName: org.postgresql.Driver
+
+
+

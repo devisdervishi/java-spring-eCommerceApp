@@ -1,4 +1,4 @@
-package devis.springboot.app;
+package devis.springboot. app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

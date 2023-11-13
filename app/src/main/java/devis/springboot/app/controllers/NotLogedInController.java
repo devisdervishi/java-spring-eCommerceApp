@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "*")
 public class NotLogedInController {
 
-    @GetMapping("/app/signin")
+    @GetMapping("/app/login")
     String  login(Model model){
         return "login";
     }

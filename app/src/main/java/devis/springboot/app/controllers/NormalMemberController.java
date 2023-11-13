@@ -24,6 +24,10 @@ public class NormalMemberController {
     @Autowired
     RatingService ratingService;
 
+    @GetMapping("/dashboard")
+    public String userDashboard(){
+        return "hello user";
+    }
     @GetMapping("/products")
     public List<Product> getAllProducts(){
         return productService.getAllProducts();
@@ -37,7 +41,7 @@ public class NormalMemberController {
     public List<Comment> getAllCommentsOfaProduct(@PathVariable("id")Long product_id){
         return commentService.getCommentsOfProduct(product_id);
     }
-    @GetMapping("products/{id}.ratings")
+    @GetMapping("products/{id}/ratings")
     public List<Rating> getAllRatingsOfaProduct(@PathVariable("id") Long product_id){
         return ratingService.getAllRatingsOfaProduct(product_id);
     }
